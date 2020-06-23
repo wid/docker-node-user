@@ -1,0 +1,3 @@
+FROM lts
+
+USER node

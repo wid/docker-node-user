@@ -1,0 +1,14 @@
+#!/bin/bash
+
+TAGS=$(wget -q -O- https://hub.docker.com/v2/repositories/library/node/tags | jq -r '.results[].name')
+
+
+for tag in $TAGS;do
+    mkdir -p "docker/$tag"
+    cat << EOF > "docker/$tag/Dockerfile"
+FROM $tag
+
+USER node
+EOF
+
+done
