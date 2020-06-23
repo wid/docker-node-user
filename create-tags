@@ -11,4 +11,26 @@ FROM node:$tag
 USER node
 EOF
 
+    mkdir -p "docker/$tag-builder"
+    cat << EOF > "docker/$tag-builder/Dockerfile"
+FROM node:$tag
+
+RUN apk update && apk add --no-cache \
+    autoconf \
+    automake \
+    gcc \
+    git \
+    g++ \
+    make \
+    nasm \
+    libtool \
+    linux-headers \
+    openssh \
+    python \
+    python-dev \
+    zlib-dev
+
+USER node
+EOF
+
 done
