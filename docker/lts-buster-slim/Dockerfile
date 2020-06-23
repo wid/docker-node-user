@@ -1,3 +1,3 @@
-FROM lts-buster-slim
+FROM node:lts-buster-slim
 
 USER node

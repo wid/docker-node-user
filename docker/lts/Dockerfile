@@ -1,3 +1,3 @@
-FROM lts
+FROM node:lts
 
 USER node

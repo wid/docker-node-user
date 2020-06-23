@@ -1,3 +1,3 @@
-FROM lts-buster
+FROM node:lts-buster
 
 USER node

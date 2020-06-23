@@ -1,3 +1,3 @@
-FROM lts-slim
+FROM node:lts-slim
 
 USER node

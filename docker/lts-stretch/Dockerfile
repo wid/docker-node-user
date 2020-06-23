@@ -1,3 +1,3 @@
-FROM lts-stretch
+FROM node:lts-stretch
 
 USER node

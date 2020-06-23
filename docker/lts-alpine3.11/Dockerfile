@@ -1,3 +1,3 @@
-FROM lts-alpine3.11
+FROM node:lts-alpine3.11
 
 USER node
