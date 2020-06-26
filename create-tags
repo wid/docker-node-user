@@ -29,7 +29,7 @@ RUN apk update && apk add --no-cache \
     python \
     python-dev \
     zlib-dev
-
+RUN npm i -g lerna
 USER node
 EOF
 
